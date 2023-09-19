@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard Panel | Bulan Campus</title>
+    <link rel="stylesheet" href="style/Accomplishment.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+
+    <!-------Boxicons CDN link----->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
+    
+    <div class="sidebar">
+        <div class="logo-details">
+            <img src="images/Revised-SSU-Logo.png" alt="logo">
+            <span class="logo_name">Sorsogon State University - Bulan Campus</span>
+        </div>
+
+        <ul class="nav-links">
+            <li>
+                <a href="StudentDashboard.html">
+                    <i class='bx bxs-dashboard'></i>
+                    <span class="link_name">Dashboard</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="StudentDashboard.html">Dashboard</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="StudentCalendar.html">
+                    <i class='bx bx-calendar-event'></i>
+                    <span class="link_name">Calendar</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="StudentCalendar.html">Calendar</a></li>
+                </ul>
+            <li>
+                <div class="icon-link">
+                    <a href="#">
+                        <i class='bx bxs-folder-open' ></i>
+                        <span class="link_name">Records</span>
+                    </a>
+                    <i class="bx bxs-chevron-down arrow"></i>
+                </div>
+                <ul class="sub-menu">
+                    <li><a class="link_name" href="#">Records</a></li>
+                    <li><a href="Requirements.html">Internship Requirements</a></li>
+                    <li><a href="Accomplishment.html">Accomplishment Reports</a></li>
+                    <li><a href="DTR.html">Daily Time Record</a></li>
+                    <li><a href="Narrative.html">Narrative Report</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="StudentEvaluation.html">
+                    <i class='bx bxs-door-open' ></i>
+                    <span class="link_name">Evaluation</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="StudentEvaluation.html">Evaluation</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bxs-log-out' ></i>
+                    <span class="link_name">Log-out</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="#">Log-out</a></li>
+                </ul>
+            </li>
+            <li>
+        <div class="profile-details">
+            <div class="profile-content">
+                <a href="#"><img src="images/PicsArt_08-23-11.10.20.jpg" alt="profile"></a>
+            </div>
+            <div class="name-job">
+                <div class="profile_name">Dela Cruz Juanna</div>
+                <div class="job">Full-Stack Web Developer</div>
+                <div class="company">Doofinshmirtz Incorporated</div>
+            </div>
+            
+            <i class= ></i>
+            </a>
+        </div>
+            </li>
+        </ul>
+    </div>
+
+    <section class="home-section">
+        <div class="home-content">
+            <i class='bx bx-menu'></i>
+            <span class="text">Records</span>
+        </div>
+    </section>
+
+    <div class="container-fluid">
+        <div class="dash-content">
+            <div class="title">
+                <i class='bx bxs-report' ></i>
+                <span class="text">ACCOMPLISHMENT REPORTS</span>
+            </div>
+
+            <div class="box"></div>
+
+
+            <!-----PREVIEW BOX-->
+            <div class="preview-box">
+                <img src="preview-image.jpg" alt="Preview Image">
+                <h2>Preview Title</h2>
+                <p>Some preview content goes here.</p>
+                <a href="#">Read More</a>
+            </div>
+
+            <!-----Forms---->
+
+                <form action="#upload.php" method="post" enctype="multipart/form-data">
+                    <label for="file">Choose a file:</label>
+                    <input type="file" name="file" id="file" accept=".pdf, .doc, .docx">
+                    <input type="submit" value="Upload File">
+                </form>
+
+
+                <div class="listahan-uno">
+                <ul>
+                    <div class="selection">
+                    <label for="week">Select a Week:</label>
+                    <select id="week" name="week" onchange="changeWeek(this.value)">
+                        <option value="1">Week 1</option>
+                        <option value="2">Week 2</option>
+                        <option value="3">Week 3</option>
+                        <option value="4">Week 4</option>
+                        <option value="5">Week 5</option>
+                        <option value="6">Week 6</option>
+                        <option value="7">Week 7</option>
+                        <option value="8">Week 8</option>
+                        <option value="9">Week 9</option>
+                        <option value="10">Week 10</option>
+                    </select>
+                    </div>
+                    <br><br>
+                    <li>
+                        <input type="checkbox" id="item1" name="item1">
+                        <label for="item1">Day 1</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="item2" name="item2">
+                        <label for="item2">Day 2</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="item3" name="item3">
+                        <label for="item3">Day 3</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="item4" name="item4">
+                        <label for="item4">Day 4</label>
+                    </li>
+                    <li>
+                        <input type="checkbox" id="item5" name="item5">
+                        <label for="item5">Day 5</label>
+                    </li>
+                </div>
+
+
+
+   <!-- Create a text editor div with contenteditable attribute for rich text editing -->
+   <div class="text-editor" contenteditable="true" id="editor">
+    Start typing here...
+</div>
+
+<!-- Create a toolbar with buttons for formatting -->
+<div class="merge">
+    <div class="toolbar">
+        <button onclick="document.execCommand('bold', false, null);"><i class="fas fa-bold"></i></button>
+        <button onclick="document.execCommand('italic', false, null);"><i class="fas fa-italic"></i></button>
+        <button onclick="document.execCommand('underline', false, null);"><i class="fas fa-underline"></i></button>
+        <button onclick="document.execCommand('justifyLeft', false, null);"><i class="fas fa-align-left"></i></button>
+        <button onclick="document.execCommand('justifyCenter', false, null);"><i class="fas fa-align-center"></i></button>
+        <button onclick="document.execCommand('justifyRight', false, null);"><i class="fas fa-align-right"></i></button>
+    </div>
+</div>
+
+
+<!-- Create a submit button -->
+<div class="sub">
+<button onclick="submitText()">Submit</button>
+</div>
+
+
+
+    <script>
+        let arrow = document.querySelectorAll(".arrow");
+        for (var i = 0; i < arrow.length; i++) {
+            arrow[i].addEventListener("click", (e)=>{
+            let arrowParent = e.target.parentElement.parentElement;
+            arrowParent.classList.toggle("showMenu");
+            });
+        }
+
+        let sidebar = document.querySelector(".sidebar");
+        let sidebarBtn = document.querySelector(".bx-menu");
+        console.log(sidebarBtn);
+        sidebarBtn.addEventListener("click", ()=>{
+            sidebar.classList.toggle("close");
+        });
+
+
+    </script>
+
+
+<script>
+    // Function to update the current week when the user selects a different week
+    function changeWeek(selectedWeek) {
+        const currentWeekElement = document.getElementById('current-week');
+        currentWeekElement.textContent = selectedWeek;
+    }
+</script>
+    
+<script src="script/Accomplishment.js"></script>
+
+
+</body>
+</html>
