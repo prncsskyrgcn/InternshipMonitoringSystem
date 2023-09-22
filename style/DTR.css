@@ -259,7 +259,7 @@
     font-size: 26px;
     font-weight: 600;
     margin-top: 0px;
-    margin-left: 60px;
+    margin-left: 0px;
     color: white;
 }
 .container-fluid .dash-content{
@@ -269,86 +269,42 @@
 .dash-content .title{
     display: fixed;
     position: absolute;
-    margin: 15px 20px 20px 190px;
-    font-size: 30px;
-    font-weight: 700;
-    background: rgb(171, 171, 171);
-    width: 800px;
-    padding: 10px;
-    padding-left: 300px;
-    border: none;
-    border-radius: 10px;
+    margin: 20px 20px 20px 30px;
 }
-.list{
-    margin-top: -23px;
-}
-.box{
-    width: 1080px; 
-    height: 110px;
-    margin-top: 5px; 
-    margin-left: 100px;
-    border: 2px solid #8e1919;
-    border-radius: 15px;
-    background: #bfb6b6;
-}
-.box h2{
-    padding: 15px;
-    padding-top: 5px;
-    font-weight: 600;
-    font-size: 20px;
-}
-.text{
-    display: block;
-    position: absolute;
-    margin-top: -80px;
-    margin-left: 250px;
-    font-size: 12px;
-}
-.text span{
-    color: rgb(0, 0, 0);
-    position: absolute;
+.dash-content .title i{
+    height: 40px;
+    width: 40px;
+    background-color: #616161;
+    border-radius: 6px;
+    color: #ffffff;
     display: flex;
-    left: 540px;
-    margin-top: -30px;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    margin-left: 10px;
 }
-progress {
-    width: 300px; 
-    height: 20px; 
-    margin: 10px 0; 
-    margin-top: -17px;
-    margin-left: 230px;
-    display: block;
+.dash-content .title .text{
+    font-size: 20px;
+    font-weight: 600;
+    margin-left: 10px;
+    margin-top: 5px;
+}
+.box {
+    width: 1100px;
+    height: 420px;
+    margin-top: 90px;
+    margin-left: 40px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(169, 169, 169);
 }
 
-#progress1 {
-    background-color: #e0e0e0; 
-}
 
-#progress2 {
-    background-color: #3498db; 
-}
-.vertical-line {
-    width: 2px; 
-    height: 80px; 
-    margin-left: 820px;
-    margin-top: -95px;
-    z-index: 1;
-    background-color: rgb(126, 62, 62);
-}
-.horizontal-line {
-    width:570px; 
-    height: 2px; 
-    margin-left: 250px;
-    margin-top: -40px;
-    z-index: 1;
-    background-color: rgb(126, 62, 62);
-}
-#datetime {
-    font-size: 15px;
-    margin-top: -50px;
-    display: block;
-    margin-left: 590px;
-}
+
+
+
+
+
 
 
 

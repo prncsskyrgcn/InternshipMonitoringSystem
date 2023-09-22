@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Dashboard Panel | Bulan Campus</title>
-    <link rel="stylesheet" href="style/StudentDashboard.css">
+    <link rel="stylesheet" href="style/DTR.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
 
     <!-------Boxicons CDN link----->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -91,84 +93,27 @@
     <section class="home-section">
         <div class="home-content">
             <i class='bx bx-menu'></i>
-            <span class="text">Dashboard</span>
+            <span class="text">Records</span>
         </div>
     </section>
 
     <div class="container-fluid">
         <div class="dash-content">
             <div class="title">
-                ANNOUNCEMENT
-            </div>
-        </div>
-
-
-            <!----iFrame-->
-            <div class="news">
-            <iframe src="demo_iframe.htm" 
-            style="border:2px solid rgb(162, 23, 23);height:300px;width:550px;margin-left:100px;margin-top:100px" 
-            title="Iframe Example"></iframe>
+                <i class='bx bxs-time-five'></i>
+                <span class="text">Daily Time Record</span>
             </div>
 
-            <div class="list">
-                <iframe src="demo_iframe.htm" 
-                style="border:2px solid rgb(162, 23, 23);height:300px;width:500px;margin-left:680px;margin-top:-490px" 
-                title="Iframe Example"></iframe>
-            </div>
+            <div class="box"></div>
 
 
-            <!--STATUS-->
-            <div class="box">
-                <h2>OJT Status</h2>
-            </div>
 
-            <div class="text">
-                <div class="reports">
-                <label for="progress1">Accomplishment Report Submitted:</label>
-                <progress id="progress1" max="100" value="50"></progress>
-                <span>50%</span>
-                </div>
+            <!-----Forms---->
 
-                <div class="counts">
-                <label for="progress2">Internship Day Counts:</label>
-                <progress id="progress2" max="100" value="75"></progress>
-                <span>75%</span>
-            </div>
             
-                <!-------SETTING TIME AND DATE-->
-                <div id="datetime"></div>
-
-            </div>
-            </div>
 
 
-            <div class="vertical-line"></div>
-            <div class="horizontal-line"></div>
 
-        </div>
-    </div>
-
-    <script>
-        function updateDateTime() {
-            const now = new Date();
-            const options = {
-                weekday: 'long',
-                year: 'numeric',
-                month: 'long',
-                day: 'numeric',
-                hour: 'numeric',
-                minute: 'numeric',
-                second: 'numeric',
-                hour12: true // Set to false for 24-hour format
-            };
-            const formattedDate = now.toLocaleString('en-US', options);
-            document.getElementById('datetime').textContent = formattedDate;
-        }
-
-        // Update the date and time every second
-        setInterval(updateDateTime, 1000);
-        updateDateTime(); // Initial call
-    </script>
 
     <script>
         let arrow = document.querySelectorAll(".arrow");
@@ -187,8 +132,7 @@
         });
 
     </script>
-    
-    <script src="script/StudentDashboard.js"></script>
+
 
 </body>
 </html>
