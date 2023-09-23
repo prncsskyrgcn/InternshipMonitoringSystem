@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Dashboard Panel | Bulan Campus</title>
-    <link rel="stylesheet" href="style/Accomplishment.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-
+    <link rel="stylesheet" href="style/Evaluation.css">
 
     <!-------Boxicons CDN link----->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -101,96 +99,53 @@
     <div class="container-fluid">
         <div class="dash-content">
             <div class="title">
-                <i class='bx bxs-report' ></i>
-                <span class="text">ACCOMPLISHMENT REPORTS</span>
+                Internship Evaluation
+            </div>
+        </div>
+
+
+            <!--STATUS-->
+            <div class="box">
+                <label for="score">Enter your score:</label>
+                <input type="number" id="score" min="0" max="100">
+                <button onclick="calculateGrade()">Calculate</button>
+                
+                <p id="result"></p>
             </div>
 
-            <div class="box"></div>
 
-
-            <!-----PREVIEW BOX-->
-            <div class="preview-box">
-                <img src="preview-image.jpg" alt="Preview Image">
-                <h2>Preview Title</h2>
-                <p>Some preview content goes here.</p>
-                <a href="#">Read More</a>
-            </div>
-
-            <!-----Forms---->
-
-                <form action="#upload.php" method="post" enctype="multipart/form-data">
-                    <label for="file">Choose a file:</label>
-                    <input type="file" name="file" id="file" accept=".pdf, .doc, .docx">
-                    <input type="submit" value="Upload File">
-                </form>
-
-
-                <div class="listahan-uno">
-                <ul>
-                    <div class="selection">
-                    <label for="week">Select a Week:</label>
-                    <select id="week" name="week" onchange="changeWeek(this.value)">
-                        <option value="1">Week 1</option>
-                        <option value="2">Week 2</option>
-                        <option value="3">Week 3</option>
-                        <option value="4">Week 4</option>
-                        <option value="5">Week 5</option>
-                        <option value="6">Week 6</option>
-                        <option value="7">Week 7</option>
-                        <option value="8">Week 8</option>
-                        <option value="9">Week 9</option>
-                        <option value="10">Week 10</option>
-                    </select>
+            <div class="page">
+                    <div class="profile-picture">
+                        <a href="#"><img src="images/PicsArt_08-23-11.10.20.jpg" alt="profile"></a>
                     </div>
-                    <br><br>
-                    <li>
-                        <input type="checkbox" id="item1" name="item1">
-                        <label for="item1">Day 1</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" id="item2" name="item2">
-                        <label for="item2">Day 2</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" id="item3" name="item3">
-                        <label for="item3">Day 3</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" id="item4" name="item4">
-                        <label for="item4">Day 4</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" id="item5" name="item5">
-                        <label for="item5">Day 5</label>
-                    </li>
-                </div>
+                    <div class="name-job">
+                        <div class="profile_name">Dela Cruz Juanna</div>
+                        <div class="job">Full-Stack Web Developer</div>
+                        <div class="company">Doofinshmirtz Incorporated</div>
+                    </div>
+            </div>
 
+    <script>
+        function updateDateTime() {
+            const now = new Date();
+            const options = {
+                weekday: 'long',
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+                hour: 'numeric',
+                minute: 'numeric',
+                second: 'numeric',
+                hour12: true // Set to false for 24-hour format
+            };
+            const formattedDate = now.toLocaleString('en-US', options);
+            document.getElementById('datetime').textContent = formattedDate;
+        }
 
-
-   <!-- Create a text editor div with contenteditable attribute for rich text editing -->
-   <div class="text-editor" contenteditable="true" id="editor">
-    Start typing here...
-</div>
-
-<!-- Create a toolbar with buttons for formatting -->
-<div class="merge">
-    <div class="toolbar">
-        <button onclick="document.execCommand('bold', false, null);"><i class="fas fa-bold"></i></button>
-        <button onclick="document.execCommand('italic', false, null);"><i class="fas fa-italic"></i></button>
-        <button onclick="document.execCommand('underline', false, null);"><i class="fas fa-underline"></i></button>
-        <button onclick="document.execCommand('justifyLeft', false, null);"><i class="fas fa-align-left"></i></button>
-        <button onclick="document.execCommand('justifyCenter', false, null);"><i class="fas fa-align-center"></i></button>
-        <button onclick="document.execCommand('justifyRight', false, null);"><i class="fas fa-align-right"></i></button>
-    </div>
-</div>
-
-
-<!-- Create a submit button -->
-<div class="sub">
-<button onclick="submitText()">Submit</button>
-</div>
-
-
+        // Update the date and time every second
+        setInterval(updateDateTime, 1000);
+        updateDateTime(); // Initial call
+    </script>
 
     <script>
         let arrow = document.querySelectorAll(".arrow");
@@ -208,20 +163,33 @@
             sidebar.classList.toggle("close");
         });
 
-
     </script>
 
-
 <script>
-    // Function to update the current week when the user selects a different week
-    function changeWeek(selectedWeek) {
-        const currentWeekElement = document.getElementById('current-week');
-        currentWeekElement.textContent = selectedWeek;
+    function calculateGrade() {
+        // Get the student's score from the input field
+        var score = parseFloat(document.getElementById("score").value);
+
+        // Define the grade evaluation criteria
+        var grade;
+        if (score >= 90) {
+            grade = "A";
+        } else if (score >= 80) {
+            grade = "B";
+        } else if (score >= 70) {
+            grade = "C";
+        } else if (score >= 60) {
+            grade = "D";
+        } else {
+            grade = "F";
+        }
+
+        // Display the grade evaluation to the student
+        document.getElementById("result").innerHTML = "Your grade is: " + grade;
     }
 </script>
     
-<script src="script/Accomplishment.js"></script>
-
+    <script src="script/StudentDashboard.js"></script>
 
 </body>
 </html>
