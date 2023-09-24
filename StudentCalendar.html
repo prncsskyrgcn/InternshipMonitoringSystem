@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Dashboard Panel | Bulan Campus</title>
-    <link rel="stylesheet" href="style/Evaluation.css">
+    <link rel="stylesheet" href="style/StudentCalendar.css">
 
     <!-------Boxicons CDN link----->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -92,56 +92,56 @@
     <section class="home-section">
         <div class="home-content">
             <i class='bx bx-menu'></i>
-            <span class="text">Records</span>
+            <span class="text">Reports</span>
         </div>
     </section>
 
-    <div class="container-fluid">
-        <div class="dash-content">
-            <div class="title">
-                Internship Evaluation
+    <div class="textbox">Daily Accomplishment Reports</div>
+    <br>
+
+        <h2>WEEK 1</h2>
+        
+        
+
+
+    <div class="container">
+        <div class="calendar">
+          <div class="header1">
+            <div class="month"></div>
+            <div class="btns">
+              <div class="btn today-btn">
+                <i class="bx bx-calendar-day"></i>
+              </div>
+              <div class="btn prev-btn">
+                <i class="bx bx-chevron-left"></i>
+              </div>
+              <div class="btn next-btn">
+                <i class="bx bx-chevron-right"></i>
+              </div>
             </div>
-        </div>
+          </div>
+          <div class="weekdays">
+            <div class="day">Sun</div>
+            <div class="day">Mon</div>
+            <div class="day">Tue</div>
+            <div class="day">Wed</div>
+            <div class="day">Thu</div>
+            <div class="day">Fri</div>
+            <div class="day">Sat</div>
+          </div>
+          <div class="days">
+</div>
 
 
-            <!--STATUS-->
-            <div class="box">
-                <h2>Internship Evaluation Report</h2>
-            </div>
+
+<div id="message-container">
+    Default Text Message Display for Intern Notices. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel atque, illum rerum accusantium porro quia dolores consectetur consequuntur minus temporibus cum eligendi deleniti optio laborum ea quasi. Fuga, ad laboriosam!
+</div>
 
 
-            <div class="page">
-                    <div class="profile-picture">
-                        <a href="#"><img src="images/PicsArt_08-23-11.10.20.jpg" alt="profile"></a>
-                    </div>
-                    <div class="name-job">
-                        <div class="profile_name">Dela Cruz Juanna</div>
-                        <div class="job">Full-Stack Web Developer</div>
-                        <div class="company">Doofinshmirtz Incorporated</div>
-                    </div>
-            </div>
 
-    <script>
-        function updateDateTime() {
-            const now = new Date();
-            const options = {
-                weekday: 'long',
-                year: 'numeric',
-                month: 'long',
-                day: 'numeric',
-                hour: 'numeric',
-                minute: 'numeric',
-                second: 'numeric',
-                hour12: true // Set to false for 24-hour format
-            };
-            const formattedDate = now.toLocaleString('en-US', options);
-            document.getElementById('datetime').textContent = formattedDate;
-        }
 
-        // Update the date and time every second
-        setInterval(updateDateTime, 1000);
-        updateDateTime(); // Initial call
-    </script>
+    
 
     <script>
         let arrow = document.querySelectorAll(".arrow");
@@ -160,8 +160,9 @@
         });
 
     </script>
-    
-    <script src="script/StudentDashboard.js"></script>
+
+        
+    <script src="script/StudentCalendar.js"></script>
 
 </body>
 </html>

@@ -259,63 +259,140 @@
     font-size: 26px;
     font-weight: 600;
     margin-top: 0px;
-    margin-left: 60px;
+    margin-left: 0px;
     color: white;
 }
-.container-fluid .dash-content{
-    padding-top: 60px;
-    padding-left: 50px;
-}
-.dash-content .title{
+.container {
+    min-height: 60vh;
     display: fixed;
     position: absolute;
-    margin: 15px 20px 20px 190px;
-    font-size: 30px;
-    font-weight: 700;
-    background: rgb(171, 171, 171);
-    width: 800px;
-    padding: 10px;
-    padding-left: 300px;
+    margin-left: 790px;
+    margin-top: 80px;
+    margin-bottom: 20px;
+    align-items: center;
+    justify-content: center;
+  }
+  .calendar {
+    display: fixed;
+    position: relative;
+    max-width: 400px;
+    padding: 30px 20px;
+    border-radius: 10px;
+    background-color: rgba(68, 68, 68, 1);
+  }
+  .calendar .header1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    padding-bottom: 0px;
+    border-bottom: 2px solid #000000;
+  }
+  .calendar .header1 .month {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text-color);
+  }
+  .calendar .header1 .btns {
+    display: flex;
+    gap: 10px;
+  }
+  .calendar .header1 .btns .btn {
+    width: 50px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    color: #fff;
+    background-color: var(--primary-color);
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+  .calendar .header1 .btns .btn:hover {
+    background-color: #791e30;
+    transform: scale(0.5);
+  }
+  .weekdays {
+    display: flex;
+    gap: 11px;
+    margin-bottom: 10px;
+  }
+  .weekdays .day {
+    width: calc(100% / 7 - 10px);
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .days {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 11px;
+  }
+  .days .day {
+    width: calc(100% / 7 - 10px);
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--text-color);
+    background-color: #fff;
+    transition: all 0.3s;
+  }
+  .days .day:not(.next):not(.prev):hover {
+    color: #fff;
+    background-color: var(--primary-color);
+    transform: scale(1.05);
+  }
+  .days .day.today {
+    color: #fff;
+    background-color: #a50e0e;
+  }
+  .days .day.next,
+  .days .day.prev {
+    color: #ccc;
+  }
+  #message-container{
+    display: flex;
+    background: white;
+    height: max-content;
+    width: 380px;
+    padding: 20px;
+    margin: 20px;
+    margin-left: -10px;
+    margin-bottom: -10px;
     border: none;
     border-radius: 10px;
-}
-.box{
-    width: 1080px; 
-    height: 110px;
-    margin-top: 390px; 
-    margin-left: 100px;
-    border: 2px solid #8e1919;
-    border-radius: 15px;
-    background: #bfb6b6;
-}
-.box h2{
-    padding: 5px;
-    padding-left: 430px;
-    font-size: 15px;
-    font-size: 500;
-}
-.page .profile-picture img{
-    height: 180px;
-    width: 180px;
+  }
+  .textbox{
+    background: rgb(129, 129, 129);
+    display: flex;
+    position: absolute;
+    padding: 10px;
+    padding-left: 50px;
+    width: 85vh;
+    border: none;
+    border-radius: 10px;
+    margin-top: 100px;
+    margin-left: 180px;
+    font-size: 25px;
+    font-weight: 600;
+  }
+h2{
     display: block;
     position: absolute;
-    margin-left: 570px;
-    margin-top: -190px;
-    border: solid 2px maroon;
-    border-radius: 100px;
-}
-.page .name-job{
-    margin-left: 550px;
-    margin-top: -220px;
-}
-.page .profile_name{
-    font-weight: 700;
-    font-size: 25px;
-}
-.page .job, .page .company{
-    font-weight: 500;
-    font-size: 20;
-}
+    margin-left: 90px;
+    margin-top: 160px;
+  }
+
+
+
 
 
 
