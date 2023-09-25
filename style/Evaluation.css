@@ -316,6 +316,12 @@
     font-weight: 500;
     font-size: 20;
 }
+.value{
+    display: block;
+    position: absolute;
+    margin-top: -60px;
+    margin-left: 600px;
+}
 
 
 

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Number Value Display</title>
+</head>
+<body>
+    <p>Click the button to display a number value:</p>
+    <button id="displayButton">Display Number</button>
+    <div id="numberDisplay"></div>
+
+    <script>
+        // Function to display a number when the button is clicked
+        function displayNumber() {
+            const randomNumber = Math.floor(Math.random() * 100); // Generate a random number (change as needed)
+            document.getElementById("numberDisplay").textContent = `The number is: ${randomNumber}`;
+        }
+
+        // Attach a click event listener to the button
+        document.getElementById("displayButton").addEventListener("click", displayNumber);
+    </script>
+</body>
+</html>

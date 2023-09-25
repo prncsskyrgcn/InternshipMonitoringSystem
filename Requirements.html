@@ -47,9 +47,7 @@
                 <ul class="sub-menu">
                     <li><a class="link_name" href="#">Records</a></li>
                     <li><a href="Requirements.html">Internship Requirements</a></li>
-                    <li><a href="Accomplishment.html">Accomplishment Reports</a></li>
                     <li><a href="Weekly.html">Weekly Reports</a></li>
-                    <li><a href="DTR.html">Daily Time Record</a></li>
                     <li><a href="Narrative.html">Narrative Report</a></li>
                 </ul>
             </li>
@@ -116,62 +114,29 @@
 
             <!-----Forms---->
 
-                <form action="#upload.php" method="post" enctype="multipart/form-data">
-                    <label for="file">Choose a file:</label>
-                    <input type="file" name="file" id="file" accept=".pdf, .doc, .docx">
-                    <input type="submit" value="Upload File">
-                </form>
+            <form action="upload.php" method="post" enctype="multipart/form-data">
+                <label for="imageFile">Choose an image file:</label>
+                <input type="file" name="imageFile" id="imageFile" accept="image/*">
+                <input type="submit" value="Upload">
+            </form>
 
-                <div class="listahan-uno">
-                <ul>
-                    <li>
-                        <input type="checkbox" id="item1" name="item1">
-                        <label for="item1">Student Information Sheet</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" id="item2" name="item2">
-                        <label for="item2">Internship Agreement</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" id="item3" name="item3">
-                        <label for="item3">Parent Consent</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" id="item4" name="item4">
-                        <label for="item4">Medical Certificate</label>
-                    </li>
-                    <li>
-                        <input type="checkbox" id="item5" name="item5">
-                        <label for="item5">Vaccination Card/Booster</label>
-                    </li>
-                </div>
-
-                <div class="listahan-dos">
-                <li>
-                    <input type="checkbox" id="item6" name="item6">
-                    <label for="item6">Barangay Clearance</label>
-                </li>
-                <li>
-                    <input type="checkbox" id="item7" name="item7">
-                    <label for="item7">Community Tax Certificate (Cedula)</label>
-                </li>
-                <li>
-                    <input type="checkbox" id="item8" name="item8">
-                    <label for="item8">Police Clearance</label>
-                </li>
-                <li>
-                    <input type="checkbox" id="item9" name="item9">
-                    <label for="item9">Recommendation Letter</label>
-                </li>
-                <li>
-                    <input type="checkbox" id="item10" name="item10">
-                    <label for="item10">Registration/Enrolment Form (Student Copy)</label>
-                </li>
-                <li>
-                    <input type="checkbox" id="item11" name="item11">
-                    <label for="item11">Evaluation of Grades</label>
-                </li>
-            </ul>
+                <div class="choices">
+                <label for="files">INTERN FILES</label>
+                <select name="files" id="files">
+                <option value="Choose File" disabled>Choose File</option>
+                <option value="Acceptance Form for OJT">Acceptance Form for OJT</option>
+                <option value="Internship Agreement">Internship Agreement</option>
+                <option value="Merit of Rating" selected>Merit of Rating</option>
+                <option value="Student INFO Sheet" selected>Student INFO Sheet</option>
+                <option value="Supervisor Feedback Form" selected>Supervisor Feedback Form</option>
+                <option value="Student Feedback Form" selected>Student feedback Form</option>
+                <option value="Parent Consent">Parent Consent</option>
+                <option value="Barangay Clearance">Barangay Clearance</option>
+                <option value="Police Clearance">Police Clearance</option>
+                <option value="Parent ID">Parent ID</option>
+                <option value="Medical Certificate">Medical Certificate</option>
+                <option value="Cedula">Cedula</option>
+                </select>
                 </div>
 
 
@@ -194,8 +159,6 @@
 
     </script>
     
-
-    <script src="script/Requirements.js"></script>
 
 </body>
 </html>

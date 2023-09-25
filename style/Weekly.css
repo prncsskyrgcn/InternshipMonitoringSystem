@@ -291,22 +291,20 @@
 }
 .box {
     width: 1100px;
-    height: 400px;
-    margin-top: 100px;
+    height: 425px;
+    margin-top: 90px;
     margin-left: 40px;
     border: none;
     border-radius: 5px;
     background-color: rgb(169, 169, 169);
 }
 .preview-box {
-    display: flex;
-    position: absolute;
     border: 1px solid #9f0808;
     padding: 10px;
-    width: 815px;
-    height: 380px;
-    margin-left: 310px;
-    margin-top: -390px;
+    width: 300px;
+    height: 200px;
+    margin-left: 830px;
+    margin-top: -410px;
     border-radius: 8px;
     background-color: #fff;
 }
@@ -317,11 +315,9 @@
 
 
 form {
-    display: block;
-    position: absolute;
-    margin: -167px auto;
-    max-width: 240px;
-    margin-left: 55px;
+    margin: 20px auto;
+    max-width: 300px;
+    margin-left: 830px;
     padding: 20px;
     border: 1px solid #9f0808;
     border-radius: 5px;
@@ -338,7 +334,6 @@ input[type="file"] {
     display: block;
     margin: 0 auto;
     padding: 10px;
-    width: 270px;
 }
 
 input[type="submit"] {
@@ -355,20 +350,63 @@ input[type="submit"] {
 input[type="submit"]:hover {
     background-color: #731111;
 }
-.choices{
-    margin-top: -390px;
-    margin-left: 55px;
+.selection{
+    display: block;
+    position: absolute;
+    margin-top: -50px;
+    margin-left: -35px;
 }
-select{
-    border:none;
-    padding: 10px 20px;
-    border-radius:5px;
-  }
-  
-  select:focus{
-    outline:none;
-  }
 
+
+/* Define CSS styles for the text editor */
+.text-editor {
+    width: 750px;
+    height: 340px;
+    margin-left: 60px;
+    margin-top: -365px;
+    background: #ffffff;
+    border: 1px solid black;
+    color: black;
+    border-radius: 5px;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+    overflow: auto;
+}
+
+/* Define CSS styles for toolbar buttons */
+.toolbar button {
+    margin-right: 5px;
+    width: fit-content;
+    background: rgb(166, 166, 166);
+    padding: 5px;
+    color: black;
+}
+.merge{
+    position: relative;
+    align-items: center;
+    margin-left: 360px;
+    margin-top: -380px;
+}
+.sub{
+    display: flex;
+    position: absolute;
+    margin-left: 700px;
+    margin-top: 350px;
+    width: fit-content;
+    max-height: fit-content;
+}
+.sub button{
+    background-color: green;
+    color: white;
+    padding: 5px;
+    border: none;
+    border-radius: 15px;
+    height: 30px;
+    width: 80px;
+}
+.sub button:hover{
+    background-color: #731111;
+}
 
 
 
