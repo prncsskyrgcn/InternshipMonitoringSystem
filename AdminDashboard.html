@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard Panel | Bulan Campus</title>
+    <link rel="stylesheet" href="style/AdminDashboard.css">
+
+    <!-------Boxicons CDN link----->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+</head>
+<body>
+    
+    <div class="sidebar">
+        <div class="logo-details">
+            <img src="images/Revised-SSU-Logo.png" alt="logo">
+            <span class="logo_name">Sorsogon State University - Bulan Campus</span>
+        </div>
+
+        <ul class="nav-links">
+            <li>
+                <a href="AdminDashboard.html">
+                    <i class='bx bxs-dashboard'></i>
+                    <span class="link_name">Dashboard</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="AdminDashboard.html">Dashboard</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="StudentList.html">
+                    <i class='bx bx-calendar-event'></i>
+                    <span class="link_name">Student List</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="StudentList.html">Student List</a></li>
+                </ul>
+            <li>
+                <div class="icon-link">
+                    <a href="#">
+                        <i class='bx bxs-folder-open' ></i>
+                        <span class="link_name">Records</span>
+                    </a>
+                    <i class="bx bxs-chevron-down arrow"></i>
+                </div>
+                <ul class="sub-menu">
+                    <li><a class="link_name" href="#">Records</a></li>
+                    <li><a href="Requirements.html">Internship Requirements</a></li>
+                    <li><a href="Weekly.html">Weekly Reports</a></li>
+                    <li><a href="Narrative.html">Narrative Report</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="StudentEvaluation.html">
+                    <i class='bx bxs-door-open' ></i>
+                    <span class="link_name">Evaluation</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="StudentEvaluation.html">Evaluation</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class='bx bxs-log-out' ></i>
+                    <span class="link_name">Log-out</span>
+                </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="#">Log-out</a></li>
+                </ul>
+            </li>
+            <li>
+        <div class="profile-details">
+            <div class="profile-content">
+                <a href="#"><img src="images/GRACELA__VANESSA_MARIZ_T_1_-removebg-preview.png" alt="profile"></a>
+            </div>
+            <div class="name-job">
+                <div class="profile_name">Admin si Dela Cruz</div>
+                <div class="job">SORSU - BC ILDO</div>
+                <div class="company">ILDO COORDINATOR</div>
+            </div>
+            
+            <i class= ></i>
+            </a>
+        </div>
+            </li>
+        </ul>
+    </div>
+
+    <section class="home-section">
+        <div class="home-content">
+            <i class='bx bx-menu'></i>
+            <span class="text">Dashboard</span>
+        </div>
+    </section>
+
+    <div class="container-fluid">
+        <div class="dash-content">
+            <div class="title">
+                ANNOUNCEMENT
+            </div>
+        </div>
+
+
+            <!----iFrame-->
+            <div class="news">
+            <iframe src="demo_iframe.htm" 
+            style="border:2px solid rgb(162, 23, 23);height:300px;width:550px;margin-left:100px;margin-top:100px" 
+            title="Iframe Example"></iframe>
+            </div>
+
+            <div class="list">
+                <iframe src="demo_iframe.htm" 
+                style="border:2px solid rgb(162, 23, 23);height:300px;width:500px;margin-left:680px;margin-top:-490px" 
+                title="Iframe Example"></iframe>
+            </div>
+
+
+            <!--STATUS-->
+            <div class="box">
+                <h2>OJT Status</h2>
+            </div>
+
+            <div class="text">
+                <div class="reports">
+                <label for="progress1">Accomplishment Report Submitted:</label>
+                <progress id="progress1" max="100" value="50"></progress>
+                <span>50%</span>
+                </div>
+
+                <div class="counts">
+                <label for="progress2">Internship Day Counts:</label>
+                <progress id="progress2" max="100" value="75"></progress>
+                <span>75%</span>
+            </div>
+            
+                <!-------SETTING TIME AND DATE-->
+                <div id="datetime"></div>
+
+            </div>
+            </div>
+
+
+            <div class="vertical-line"></div>
+            <div class="horizontal-line"></div>
+
+        </div>
+    </div>
+
+    <script>
+        function updateDateTime() {
+            const now = new Date();
+            const options = {
+                weekday: 'long',
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+                hour: 'numeric',
+                minute: 'numeric',
+                second: 'numeric',
+                hour12: true // Set to false for 24-hour format
+            };
+            const formattedDate = now.toLocaleString('en-US', options);
+            document.getElementById('datetime').textContent = formattedDate;
+        }
+
+        // Update the date and time every second
+        setInterval(updateDateTime, 1000);
+        updateDateTime(); // Initial call
+    </script>
+
+    <script>
+        let arrow = document.querySelectorAll(".arrow");
+        for (var i = 0; i < arrow.length; i++) {
+            arrow[i].addEventListener("click", (e)=>{
+            let arrowParent = e.target.parentElement.parentElement;
+            arrowParent.classList.toggle("showMenu");
+            });
+        }
+
+        let sidebar = document.querySelector(".sidebar");
+        let sidebarBtn = document.querySelector(".bx-menu");
+        console.log(sidebarBtn);
+        sidebarBtn.addEventListener("click", ()=>{
+            sidebar.classList.toggle("close");
+        });
+
+    </script>
+    
+    <script src="script/StudentDashboard.js"></script>
+
+</body>
+</html>
