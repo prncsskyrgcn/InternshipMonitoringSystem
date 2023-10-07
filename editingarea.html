@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        /* Add custom CSS styles here */
+        body{}
+
+        .DailyAccomplishment{
+            background: green;
+            padding: 20px;
+            border: none;
+            border-radius: 10px;
+            height: calc(100% - 50%);
+            width: 80vh;
+        }
+        h2{
+            background-color: rgba(255, 0, 0, 0.689);
+            padding: 10px;
+            text-align: center;
+            font-family:Arial, Helvetica, sans-serif;
+            font-weight: 700;
+        }
+        p{
+            background-color: maroon;
+            padding: 10px;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        textarea{
+            height: 50vh;
+            width: 76vh;
+            border: none;
+            border-radius: 10px;
+            padding: 10px;
+            font-family: 'Courier New', Courier, monospace;
+            margin-bottom: 10px;
+        }
+
+        button{
+            background-color: rgb(125, 241, 125);
+            border: none;
+            border-radius: 100px;
+            padding: 5px;
+            font-size: 12px;
+            width: 120px;
+            text-align: center;
+        }
+
+        .submit-button{
+            margin-left: 80px;
+        }
+
+        .rest-day-button{
+            margin-left: 335px;
+            margin-top: 5px;
+        }
+
+        h3{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            background-color: aquamarine;
+            padding: 10px;
+        }
+
+        li{
+            background-color: blueviolet;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="DailyAccomplishement">
+    <div class="DailyAccomplishment">
+        <h2>Create Daily Accomplishment Report</h2> <br>
+        
+        <!-- Insert the date here -->
+        <p>Date: [Insert Date Here]</p>
+
+        <form id="DailyAccomplishmentForm" method="post" enctype="multipart/form-data">
+            <!-- CSRF token -->
+            <input type="hidden" name="csrfmiddlewaretoken" value="[Insert CSRF Token Here]">
+            
+            <!-- Insert the date here as a hidden input field -->
+            <input type="hidden" name="date" value="[Insert Date Here]">
+            
+            <textarea name="text_submission" placeholder="Text Submission"></textarea>
+            <input type="file" name="document_submission">
+            <button type="submit" class="submit-button">Submit</button>
+            <button type="submit" class="rest-day-button" name="rest_day" value="true">Rest Day</button>
+        </form>
+
+        <!-- Insert existing accomplishments here -->
+        <h3>Existing Accomplishments:</h3>
+        <ul>
+            <!-- Loop through accomplishments and insert them here -->
+            <li>[Insert Accomplishment Text Here]</li>
+            
+            <!-- Check if there is a document_submission URL and insert a link if available -->
+            <!-- Example: <li><a href="[Insert Document URL Here]" target="_blank">Download File</a></li> -->
+        </ul>
+        
+      
+
+
+
+<!-----------------------------Time In Out-------------------------------------->
+
+<form method="post" action="[Insert Download History URL Here]">
+    <!-- CSRF token -->
+    <input type="hidden" name="csrfmiddlewaretoken" value="[Insert CSRF Token Here]">
+    <button type="submit" name="download_history" value="true">Download History</button>
+</form>
+
+<br><br>
+
+<!-----------------------------Time In Out/end-------------------------------------->
+</div>
+</div>
+</body>
+</html>
