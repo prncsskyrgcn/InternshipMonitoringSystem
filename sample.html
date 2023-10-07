@@ -4,29 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Student Dashboard Panel | Bulan Campus</title>
-    <link rel="stylesheet" href="style/Calendar.css">
-    <link rel="stylesheet" href="style/CreateCalendar.css">
+    <link rel="stylesheet" href="style/Sample.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+
+    <!-------Boxicons CDN link----->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
 </head>
 <body>
+    
     <div class="sidebar">
         <div class="logo-details">
             <img src="images/Revised-SSU-Logo.png" alt="logo">
             <span class="logo_name">Sorsogon State University - Bulan Campus</span>
         </div>
+
         <ul class="nav-links">
             <li>
                 <a href="StudentDashboard.html">
                     <i class='bx bxs-dashboard'></i>
                     <span class="link_name">Dashboard</span>
                 </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="StudentDashboard.html">Dashboard</a></li>
+                </ul>
             </li>
             <li>
                 <a href="StudentCalendar.html">
                     <i class='bx bx-calendar-event'></i>
                     <span class="link_name">Calendar</span>
                 </a>
-            </li>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="StudentCalendar.html">Calendar</a></li>
+                </ul>
             <li>
                 <div class="icon-link">
                     <a href="#">
@@ -47,58 +58,73 @@
                     <i class='bx bxs-door-open' ></i>
                     <span class="link_name">Evaluation</span>
                 </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="StudentEvaluation.html">Evaluation</a></li>
+                </ul>
             </li>
             <li>
                 <a href="#">
                     <i class='bx bxs-log-out' ></i>
                     <span class="link_name">Log-out</span>
                 </a>
+                <ul class="sub-menu blank">
+                    <li><a class="link_name" href="#">Log-out</a></li>
+                </ul>
             </li>
             <li>
-                <div class="profile-details">
-                    <div class="profile-content">
-                        <a href="#"><img src="images/PicsArt_08-23-11.10.20.jpg" alt="profile"></a>
-                    </div>
-                    <div class="name-job">
-                        <div class="profile_name">Dela Cruz Juanna</div>
-                        <div class="job">Full-Stack Web Developer</div>
-                        <div class="company">Doofinshmirtz Incorporated</div>
-                    </div>
-                </div>
+        <div class="profile-details">
+            <div class="profile-content">
+                <a href="#"><img src="images/PicsArt_08-23-11.10.20.jpg" alt="profile"></a>
+            </div>
+            <div class="name-job">
+                <div class="profile_name">Dela Cruz Juanna</div>
+                <div class="job">Full-Stack Web Developer</div>
+                <div class="company">Doofinshmirtz Incorporated</div>
+            </div>
+            
+            <i class= ></i>
+            </a>
+        </div>
             </li>
         </ul>
     </div>
+
     <section class="home-section">
         <div class="home-content">
             <i class='bx bx-menu'></i>
-            <span class="text">Setting Calendar</span>
+            <span class="text">Daily Accomplishment Report</span>
         </div>
     </section>
-    <div class="createcalendar">
-        <h2>Create Internship Calendar</h2>
-        <form method="post" action="your_action_url_here">
-            <input type="hidden" name="csrfmiddlewaretoken" value="your_csrf_token_here">
-            <div class="form-group">
-                <label for="start_month">Start Month:</label>
-                <input type="text" id="start_month" name="start_month">
+
+    <div class="box"></div>
+
+    <div id="clock"></div>
+
+    <div class="line"></div>
+
+    <div class="click"></div>
+
+    <div class="teksto">DAILY REPORT</div>
+
+    <div class="columns">
+        <form>
+            <div class="text-container">
+                <div class="column">
+                    <label for="column1">DATE</label>
+                    <textarea name="column1" id="column1" placeholder=" mm/dd/yyyy"></textarea>
+                </div>
+                <div class="column">
+                    <label for="column2">DAILY ACCOMPLISHMENT</label>
+                    <textarea name="column2" id="column2" placeholder=" input text"></textarea>
+                </div>
+                <div class="column">
+                    <label for="column3">NO. OF HOURS</label>
+                    <textarea name="column3" id="column3" placeholder=" hh hours"></textarea>
+                </div>
             </div>
-            <div class="form-group">
-                <label for="end_month">End Month:</label>
-                <input type="text" id="end_month" name="end_month">
-            </div>
-            <button type="submit">Submit Report</button>
+            <input type="submit" value="Submit Report" id="submit-button">
         </form>
-
-</div>
-
-        <div class="eme">
-            <a><img src="images/SorSU-Logo.png" alt="profile"></a>
-        </div>
-
-        <div class="cc">
-            <a><img src="images/cc.gif" alt="profile"></a>
-        </div>
-
+    </div>
 
 
 
@@ -121,5 +147,50 @@
 
 
     </script>
+
+
+    <script>
+        function updateClock() {
+    const clockElement = document.getElementById("clock");
+    const now = new Date();
+    let hours = now.getHours();
+    const ampm = hours >= 12 ? "PM" : "AM";
+    
+    // Convert to 12-hour format
+    hours = hours % 12 || 12;
+
+    const minutes = now.getMinutes().toString().padStart(2, "0");
+    const seconds = now.getSeconds().toString().padStart(2, "0");
+    const timeString = `${hours}:${minutes}:${seconds} ${ampm}`;
+    
+    clockElement.textContent = timeString;
+}
+
+// Update the clock every second
+setInterval(updateClock, 1000);
+
+// Initial update
+updateClock();
+
+    </script>
+
+
+
+<script>
+    document.querySelector('form').addEventListener('submit', function (e) {
+        e.preventDefault();
+
+        const formData = new FormData(this);
+        const textData = {};
+
+        formData.forEach((value, key) => {
+            textData[key] = value;
+        });
+
+        // You can handle the collected data here, for example, sending it to a server.
+        console.log(textData);
+    });
+</script>
+
 </body>
 </html>
