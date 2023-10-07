@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Interns Calendar Detail</title>
+
+    <style>
+
+        .juswa{
+            background: green;
+            padding: 20px;
+            border: none;
+            border-radius: 20px;
+            width: 300px;
+            height: calc(100% - 100%);
+            margin-left: 300px;
+            margin-top: 50px;
+        }
+
+        h1{
+            background-color: aqua;
+            padding: 5px;
+            font-size: 25px;
+            text-align: center;
+        }
+
+        p{
+            display: grid;
+        }
+
+        .month{
+            display: flex;
+            margin-top: -20px;
+            justify-content: space-between;
+        }
+
+        .pindutan{
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            color: rgb(212, 15, 15); 
+            background-color: rgb(110, 7, 150);
+        }
+
+        .pindutan button{
+            background: green;
+            border: none;
+            border-radius: 100px;
+            padding: 5px;
+            width: 100px;
+        }
+
+        h2{
+            background-color: aqua;
+            text-align: center;
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            padding: 5px;
+        }
+
+        li{
+            background: rebeccapurple;
+            padding: 5px;
+        }
+
+        .past button{
+            background-color: azure;
+            border: none;
+            border-radius: 100px;
+            padding: 8px;
+        }
+
+    </style>
+
+    <!---Sa may .pindutan na class ang color: kineme dadto
+         for text color ata yun san maluwas na record sa dtr-->
+</head>
+<body>
+
+    <div class="juswa">
+    <h1>Interns Calendar Detail</h1>
+
+    <p><strong>User:</strong> [User Data]</p>
+    <div class="month">
+    <p><strong>Start Month:</strong> [Start Month Data]</p>
+    <p><strong>End Month:</strong> [End Month Data]</p>
+    </div>
+
+    <div class="pindutan">
+    <form method="post" action="[Time In URL]">
+        <input type="hidden" name="csrfmiddlewaretoken" value="[CSRF Token]">
+        <button type="submit">Time In</button>
+    </form>
+
+    <form method="post" action="[Time Out URL]">
+        <input type="hidden" name="csrfmiddlewaretoken" value="[CSRF Token]">
+        <button type="submit">Time Out</button>
+    </form>
+    </div>
+
+    <h2>Time Records</h2>
+    <ul>
+        <li>[Timestamp Data] - [Action Data]</li>
+    </ul>
+
+    <div class="past">
+    <form method="post" action="[Download History URL]">
+        <input type="hidden" name="csrfmiddlewaretoken" value="[CSRF Token]">
+        <button type="submit" name="download_history" value="true">Download History</button>
+    </form>
+    </div>
+
+    <a href="[Calendar View URL]">Back to Calendar</a>
+</div>
+</body>
+</html>
